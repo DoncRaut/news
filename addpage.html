@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add News | NewsHub Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reusing Admin Dashboard Sidebar Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            background: #f5f5f5;
+        }
+        
+        .sidebar {
+            width: 250px;
+            background: #222;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            padding: 20px 0;
+        }
+        
+        .sidebar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #d32f2f;
+        }
+        
+        .sidebar ul {
+            list-style: none;
+        }
+        
+        .sidebar li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .sidebar li:hover {
+            background: #333;
+        }
+        
+        .sidebar a {
+            color: #ccc;
+            display: block;
+        }
+        
+        .sidebar a:hover {
+            color: #fff;
+        }
+        
+        .sidebar i {
+            margin-right: 10px;
+        }
+        
+        /* Add News Form */
+        .main-content {
+            margin-left: 250px;
+            width: calc(100% - 250px);
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+        }
+        
+        .add-news-form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .form-group textarea {
+            min-height: 200px;
+        }
+        
+        .form-group .image-upload {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .form-group .image-upload img {
+            max-width: 150px;
+            max-height: 100px;
+            border: 1px dashed #ddd;
+        }
+        
+        .submit-btn {
+            background: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .submit-btn:hover {
+            background: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar (Same as Admin Dashboard) -->
+    <div class="sidebar">
+        <div class="logo">NewsHub Admin</div>
+        <ul>
+            <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+            <li><a href="addpage.html" class="active"><i class="fas fa-plus-circle"></i> Add News</a></li>
+            <li><a href="#"><i class="fas fa-newspaper"></i> Manage News</a></li>
+            <li><a href="#"><i class="fas fa-tags"></i> Categories</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> Users</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="pro1.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        </ul>
+    </div>
+    
+    <!-- Add News Form -->
+    <div class="main-content">
+        <div class="header">
+            <h1>Add News</h1>
+        </div>
+        
+        <form class="add-news-form">
+            <div class="form-group">
+                <label for="headline">Headline</label>
+                <input type="text" id="headline" placeholder="Enter news headline" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="category">Category</label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="world">World</option>
+                    <option value="business">Business</option>
+                    <option value="technology">Technology</option>
+                    <option value="science">Science</option>
+                    <option value="health">Health</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="image">Featured Image</label>
+                <div class="image-upload">
+                    <input type="file" id="image" accept="image/*">
+                    <img id="preview" src="#" alt="Preview" style="display: none;">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="summary">Summary</label>
+                <textarea id="summary" placeholder="Brief summary (max 200 characters)" maxlength="200" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="content">Full Content</label>
+                <textarea id="content" placeholder="Write the full news content here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Publish News</button>
+        </form>
+    </div>
+    
+    <script>
+        // Image Preview Function
+        document.getElementById('image').addEventListener('change', function(e) {
+            const preview = document.getElementById('preview');
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
