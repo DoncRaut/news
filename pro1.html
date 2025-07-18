@@ -5,24 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsHub | Latest Breaking News</title>
     <link rel="stylesheet" href="pro1.css">
-    <link rel="stylesheet" href="admin.html">
-    <link rel="stylesheet" href="addpage.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-
-   
 </head>
 <body>
     <!-- Top Bar -->
-    <div class="hide-on-scroll" id="mainHeader" style="width:100%;max-width:none;margin:0;padding:0;">
-        <div class="top-bar" style="max-width:none;margin:0 auto;padding:0 24px;">
+    <div class="hide-on-scroll" id="mainHeader">
+        <div class="top-bar">
             <div class="logo">NewsHub</div>
             <div class="search-login">
                 <input type="text" placeholder="Search...">
-                <button><a href="login.html">Login</a></button>
+                <button class="log"><a href="login.html">Login</a></button>
             </div>
         </div>
-        <!-- Navigation (Categories) moved inside header for sticky effect -->
-        <nav class="desktop-menu" id="mainNav" style="max-width:none;margin:0 auto;padding:0 24px;">
+        <!-- Navigation (Categories) -->
+        <nav class="desktop-menu" id="mainNav">
             <div class="categories">
                 <a href="index.html" data-page="home">Home</a>
                 <a href="business.html" data-page="business">Business</a>
@@ -32,309 +29,305 @@
                 <a href="sports.html" data-page="sports">Sports</a>
             </div>
         </nav>
-        <div class="mobile-menu" style="max-width:none;margin:0 auto;padding:0 24px;">
-            <button><i class="fas fa-bars"></i> Menu</button>
+        <div class="mobile-menu">
+            <button class="hamburger" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </div>
     
     <!-- Breaking News Ticker -->
     <div class="breaking-news">
-        <div class="container">
-            <div class="ticker">
-                <span>BREAKING:</span>
-                <marquee>Global summit on climate change begins today | New tech startup raises $50M | Major sports event postponed due to weather</marquee>
-            </div>
+        <div class="ticker">
+            <span>BREAKING:</span>
+            <marquee>Global summit on climate change begins today | New tech startup raises $50M | Major sports event postponed due to weather</marquee>
         </div>
     </div>
     
     <!-- Featured Headline -->
-    <div class="container">
-        <div class="featured">
-            <img src="C:\Users\ACER\Desktop\images.jpg" alt="Featured News">
-            <h1>Global Leaders Meet to Discuss Climate Crisis Solutions</h1>
-            <p>World leaders gather at the annual summit to address urgent environmental challenges.</p
+    <div class="featured">
+        <div class="featured-heading">
+            Global Leaders Meet to Discuss Climate Crisis Solutions
+        </div>
+        <img src="https://picsum.photos/300/200?random=90" alt="Featured News">
+        <div class="featured-news">
+            World leaders gather at the annual summit to address urgent environmental challenges.  
+            The conference aims to set new goals for reducing emissions and promoting sustainable development worldwide.
         </div>
     </div>
     
     <!-- Main Content -->
-    <div class="container">
-        <div class="news-grid">
-            <!-- News Cards -->
-            <div class="news-cards">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x180" alt="News Image">
-                    <div class="card-content">
-                        <h3>New Breakthrough in Renewable Energy Announced</h3>
-                        <p>Scientists unveil a revolutionary solar panel technology that doubles efficiency.</p>
-                        <div class="timestamp">2 hours ago | Technology</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="C:\Users\ACER\Desktop\images.jpg" alt="News Image">
-                    <div class="card-content">
-                        <h3>Stock Markets Reach All-Time High Amid Economic Recovery</h3>
-                        <p>Global markets surge as economies rebound post-pandemic.</p>
-                        <div class="timestamp">4 hours ago | Business</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x180" alt="News Image">
-                    <div class="card-content">
-                        <h3>New Study Links Exercise to Reduced Risk of Chronic Disease</h3>
-                        <p>Research highlights the long-term benefits of regular physical activity.</p>
-                        <div class="timestamp">6 hours ago | Health</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x180" alt="News Image">
-                    <div class="card-content">
-                        <h3>Major Film Festival Announces 2024 Lineup</h3>
-                        <p>Critically acclaimed movies set to premiere at the international event.</p>
-                        <div class="timestamp">8 hours ago | Entertainment</div>
-                    </div>
+    <div class="news-grid">
+        <!-- News Cards -->
+        <div class="news-cards">
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=1" alt="News Image">
+                <div class="card-content">
+                    <h3>New Breakthrough in Renewable Energy Announced</h3>
+                    <p>Scientists unveil a revolutionary solar panel technology that doubles efficiency.</p>
+                    <div class="timestamp">2 hours ago | Technology</div>
                 </div>
             </div>
-            
-            <!-- Sidebar -->
-            <div class="sidebar">
-    <div class="sidebar-section">
-        <h2>Most Read</h2>
-        <ul class="sidebar-list">
-            <li>
-                <a href="#">Global Summit on Climate Change Begins Today</a>
-                <div class="sidebar-preview">A look at the key topics and leaders attending the summit.</div>
-            </li>
-            <li>
-                <a href="#">Tech Giant Unveils Next-Gen Smartphone</a>
-                <div class="sidebar-preview">The latest smartphone features cutting-edge technology.</div>
-            </li>
-            <li>
-                <a href="#">Scientists Discover New Species in Amazon</a>
-                <div class="sidebar-preview">Researchers announce a new species found deep in the rainforest.</div>
-            </li> 
-            <li>
-                <a href="#">Stock Markets Hit Record Highs</a>
-                <div class="sidebar-preview">Markets surge as investors react to positive economic news.</div>
-            </li>
-            <li>
-                <a href="#">New Health Guidelines Released</a>
-                <div class="sidebar-preview">Experts share updated recommendations for healthy living.</div>
-            </li>
-        </ul>
-    </div>
-    <div class="sidebar-section">
-        <h2>Trending</h2>
-        <ul class="sidebar-list">
-            <li>
-                <a href="#">#ClimateActionNow Trends on Social Media</a>
-                <div class="sidebar-preview">Millions join the movement for climate action worldwide.</div>
-            </li>
-            <li>
-                <a href="#">Viral Video Sparks Global Debate</a>
-                <div class="sidebar-preview">A viral video ignites conversations on social platforms.</div>
-            </li>
-            <li>
-                <a href="#">Celebrity Couple Announces Engagement</a>
-                <div class="sidebar-preview">Fans celebrate as the couple shares their happy news.</div>
-            </li>
-        </ul>
-    </div>
-    <div class="sidebar-section">
-        <h2>Editor's Picks</h2>
-        <ul class="sidebar-list">
-            <li>
-                <a href="#">In-Depth: The Future of AI</a>
-                <div class="sidebar-preview">Exploring how artificial intelligence will shape tomorrow.</div>
-            </li>
-            <li>
-                <a href="#">Exclusive Interview with Leading Scientist</a>
-                <div class="sidebar-preview">Insights from a top expert in the field of science.</div>
-            </li>
-            <li>
-                <a href="#">Opinion: The Ethics of Technology</a>
-                <div class="sidebar-preview">A thoughtful look at the moral side of innovation.</div>
-            </li>
-        </ul>
-    </div>
-</div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=2" alt="News Image">
+                <div class="card-content">
+                    <h3>Stock Markets Reach All-Time High Amid Economic Recovery</h3>
+                    <p>Global markets surge as economies rebound post-pandemic.</p>
+                    <div class="timestamp">4 hours ago | Business</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=3" alt="News Image">
+                <div class="card-content">
+                    <h3>New Study Links Exercise to Reduced Risk of Chronic Disease</h3>
+                    <p>Research highlights the long-term benefits of regular physical activity.</p>
+                    <div class="timestamp">6 hours ago | Health</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=4" alt="News Image">
+                <div class="card-content">
+                    <h3>Major Film Festival Announces 2024 Lineup</h3>
+                    <p>Critically acclaimed movies set to premiere at the international event.</p>
+                    <div class="timestamp">8 hours ago | Entertainment</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=5" alt="News Image">
+                <div class="card-content">
+                    <h3>Breakthrough in Cancer Research Offers New Hope</h3>
+                    <p>Doctors report promising results from a new experimental treatment.</p>
+                    <div class="timestamp">10 hours ago | Health</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="C:\Users\ACER\Desktop\projects\lostchild.jpg" alt="News Image">
+                <div class="card-content">
+                    <h3>A child lost seperated from her family</h3>
+                    <p>child goes missing due to rapid lood in lower regions.</p>
+                    <div class="timestamp">12 hours ago | Science</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=7" alt="News Image">
+                <div class="card-content">
+                    <h3>Local Community Garden Wins National Award</h3>
+                    <p>Volunteers celebrate recognition for their sustainable urban project.</p>
+                    <div class="timestamp">14 hours ago | Local</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=8" alt="News Image">
+                <div class="card-content">
+                    <h3>Historic Landmark Reopens After Renovation</h3>
+                    <p>The city’s iconic building welcomes visitors with new exhibits and tours.</p>
+                    <div class="timestamp">16 hours ago | Culture</div>
+                </div>
+            </div>
+            <!-- Additional news cards to make the page longer -->
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=9" alt="News Image">
+                <div class="card-content">
+                    <h3>Wildlife Conservation Efforts Show Positive Results</h3>
+                    <p>Endangered species populations are on the rise thanks to new initiatives.</p>
+                    <div class="timestamp">18 hours ago | Environment</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=10" alt="News Image">
+                <div class="card-content">
+                    <h3>City Launches New Public Transportation System</h3>
+                    <p>Residents praise the eco-friendly and efficient new transit options.</p>
+                    <div class="timestamp">20 hours ago | Local</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=11" alt="News Image">
+                <div class="card-content">
+                    <h3>Breakthrough in Quantum Computing Announced</h3>
+                    <p>Researchers achieve a new milestone in quantum technology.</p>
+                    <div class="timestamp">22 hours ago | Technology</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=12" alt="News Image">
+                <div class="card-content">
+                    <h3>International Art Fair Attracts Record Crowds</h3>
+                    <p>Artists from around the world showcase their latest works.</p>
+                    <div class="timestamp">1 day ago | Culture</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=13" alt="News Image">
+                <div class="card-content">
+                    <h3>Medical Team Performs Groundbreaking Surgery</h3>
+                    <p>Doctors successfully complete a complex procedure never done before.</p>
+                    <div class="timestamp">1 day ago | Health</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=14" alt="News Image">
+                <div class="card-content">
+                    <h3>New Legislation Aims to Improve Education Standards</h3>
+                    <p>Lawmakers introduce reforms to enhance learning outcomes for students.</p>
+                    <div class="timestamp">1 day ago | Politics</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=15" alt="News Image">
+                <div class="card-content">
+                    <h3>Sports Team Wins National Championship</h3>
+                    <p>Fans celebrate as their team brings home the trophy after a thrilling final.</p>
+                    <div class="timestamp">1 day ago | Sports</div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=16" alt="News Image">
+                <div class="card-content">
+                    <h3>Scientists Develop New Eco-Friendly Packaging</h3>
+                    <p>Innovative materials promise to reduce plastic waste worldwide.</p>
+                    <div class="timestamp">1 day ago | Science</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h2>Most Read</h2>
+                <ul class="sidebar-list">
+                    <li class="dropdown">
+                        <span>Global Summit on Climate Change Begins Today</span>
+                        <ul class="dropdown-content">
+                            <li>A look at the key topics and leaders attending the summit.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Tech Giant Unveils Next-Gen Smartphone</span>
+                        <ul class="dropdown-content">
+                            <li>The latest smartphone features cutting-edge technology.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Scientists Discover New Species in Amazon</span>
+                        <ul class="dropdown-content">
+                            <li>Researchers announce a new species found deep in the rainforest.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Stock Markets Hit Record Highs</span>
+                        <ul class="dropdown-content">
+                            <li>Markets surge as investors react to positive economic news.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>New Health Guidelines Released</span>
+                        <ul class="dropdown-content">
+                            <li>Experts share updated recommendations for healthy living.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h2>Trending</h2>
+                <ul class="sidebar-list">
+                    <li class="dropdown">
+                        <span>#ClimateActionNow Trends on Social Media</span>
+                        <ul class="dropdown-content">
+                            <li>Millions join the movement for climate action worldwide.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Viral Video Sparks Global Debate</span>
+                        <ul class="dropdown-content">
+                            <li>A viral video ignites conversations on social platforms.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Celebrity Couple Announces Engagement</span>
+                        <ul class="dropdown-content">
+                            <li>Fans celebrate as the couple shares their happy news.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h2>Editor's Picks</h2>
+                <ul class="sidebar-list">
+                    <li class="dropdown">
+                        <span>In-Depth: The Future of AI</span>
+                        <ul class="dropdown-content">
+                            <li>Exploring how artificial intelligence will shape tomorrow.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Exclusive Interview with Leading Scientist</span>
+                        <ul class="dropdown-content">
+                            <li>Insights from a top expert in the field of science.</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <span>Opinion: The Ethics of Technology</span>
+                        <ul class="dropdown-content">
+                            <li>A thoughtful look at the moral side of innovation.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     
     <!-- Footer -->
-    <footer style="width:100%;max-width:none;margin:0;padding:0;">
-        <div class="footer-content" style="max-width:none;margin:0;padding:40px 24px 0 24px;">
-                <div class="footer-column">
-                    <h3>About Us</h3>
-                    <ul>
-                        <li><a href="#">Our Mission</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Categories</h3>
-                    <ul>
-                        <li><a href="#">World</a></li>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Health</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Connect</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="health.html">Health</a></li>
+                    <li><a href="entertainment.html">Entertainment</a></li>
+                    <li><a href="sports.html">Sports</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <form class="newsletter-signup">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-icons">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 NewsHub. All Rights Reserved.
+        </div>
     </footer>
-       <script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
-<style>
-/* Sidebar dropdown on hover with smooth animation */
-.sidebar-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-.sidebar-list li {
-    position: relative;
-    margin-bottom: 8px;
-}
-.sidebar-list .sidebar-preview {
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-    left: 0;           /* Changed from left: 100% */
-    top: 100%;         /* Added to drop below the item */
-    width: 100%;       /* Make it as wide as the parent li */
-    background: #5f5a5a;
-    color: #222;
-    border-radius: 4px;
-    padding: 10px 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    z-index: 10;
-    font-size: 0.97em;
-    margin-left: 0;    /* Remove margin-left */
-    max-height: 0;
-    transition: 
-        opacity 0.3s cubic-bezier(.4,0,.2,1),
-        max-height 0.3s cubic-bezier(.4,0,.2,1),
-        visibility 0.3s cubic-bezier(.4,0,.2,1);
-    overflow: hidden;
-}
-.sidebar-list li:hover .sidebar-preview {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    max-height: 200px; /* enough for the content */
-}
-.sidebar-section h2 {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #d32f2f;
-    font-weight: bold;
-}
-.hide-on-scroll {
-    transition:
-        transform 0.35s cubic-bezier(.4,0,.2,1),
-        box-shadow 0.3s cubic-bezier(.4,0,.2,1),
-        background 0.3s cubic-bezier(.4,0,.2,1),
-        height 0.3s cubic-bezier(.4,0,.2,1),
-        min-height 0.3s cubic-bezier(.4,0,.2,1),
-        max-height 0.3s cubic-bezier(.4,0,.2,1),
-        padding 0.3s cubic-bezier(.4,0,.2,1),
-        font-size 0.3s cubic-bezier(.4,0,.2,1),
-        scale 0.3s cubic-bezier(.4,0,.2,1);
-    will-change: transform, scale;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: #fff;
-}
-.hide-on-scroll.shrink {
-    transform: scale(0.75);
-    transform-origin: top center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.top-bar, .desktop-menu, .mobile-menu {
-    transition: font-size 0.3s cubic-bezier(.4,0,.2,1), padding 0.3s cubic-bezier(.4,0,.2,1);
-}
-.hide-on-scroll.shrink .top-bar,
-.hide-on-scroll.shrink .desktop-menu,
-.hide-on-scroll.shrink .mobile-menu {
-    font-size: 0.85em;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-.categories a {
-    margin-right: 18px;
-    text-decoration: none;
-    color: #222;
-    font-weight: 500;
-    transition: color 0.2s, border-bottom 0.2s;
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-    position: relative;
-}
-.categories a:hover,
-.categories a.active {
-    color: #d32f2f;
-    border-bottom: 2px solid #d32f2f;
-}
-.categories a.active::after {
-    content: '';
-    display: block;
-    margin: 0 auto;
-    width: 18px;
-    height: 3px;
-    background: #d32f2f;
-    border-radius: 2px;
-    margin-top: 2px;
-}
-</style>
-<script>
-// Hide-on-scroll header and shrink on scroll
-let lastScrollTop = 0;
-const header = document.getElementById('mainHeader');
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop && scrollTop > 60) {
-        header.classList.add('shrink');
-    } else {
-        header.classList.remove('shrink');
-    }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-});
-
-// Highlight active category
-document.querySelectorAll('.categories a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        document.querySelectorAll('.categories a').forEach(a => a.classList.remove('active'));
-        this.classList.add('active');
-        // Optionally prevent default if not navigating
-        // e.preventDefault();
-    });
-});
-
-// Optionally, set the first category as active on page load
-document.addEventListener('DOMContentLoaded', function() {
-    const current = document.querySelector('.categories a');
-    if(current) current.classList.add('active');
-});
-</script>

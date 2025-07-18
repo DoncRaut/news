@@ -4,9 +4,11 @@ const header = document.getElementById('mainHeader');
 window.addEventListener('scroll', function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop && scrollTop > 60) {
-        header.classList.add('shrink');
+        // Scroll Down: Hide header
+        header.style.transform = 'translateY(-100%)';
     } else {
-        header.classList.remove('shrink');
+        // Scroll Up: Show header
+        header.style.transform = 'translateY(0)';
     }
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
@@ -19,29 +21,9 @@ document.querySelectorAll('.categories a').forEach(link => {
     });
 });
 
-// Set active category based on page
+// Optionally, set the first category as active on page load
 document.addEventListener('DOMContentLoaded', function() {
-    const page = document.body.getAttribute('data-page');
-    if (page) {
-        document.querySelectorAll('.categories a').forEach(a => {
-            if (a.getAttribute('data-page') === page) a.classList.add('active');
-        });
-    }
+    const current = document.querySelector('.categories a');
+    if(current) current.classList.add('active');
 });
-
-// Load news articles
-document.addEventListener('DOMContentLoaded', function() {
-    // In production, fetch from API
-    const newsContainer = document.getElementById('newsContainer');
-    newsContainer.innerHTML = `
-        <div class="card">
-            <img src="images/news1.jpg" alt="News">
-            <div class="card-content">
-                <h3>Global Climate Summit Begins</h3>
-                <p>World leaders gather to discuss solutions...</p>
-                <div class="timestamp">2 hours ago | World</div>
-            </div>
-        </div>
-        <!-- More news cards -->
-    `;
-});
+  
